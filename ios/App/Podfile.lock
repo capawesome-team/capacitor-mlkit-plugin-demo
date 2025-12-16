@@ -1,52 +1,52 @@
 PODS:
-  - Capacitor (7.0.0):
+  - Capacitor (8.0.0):
     - CapacitorCordova
-  - CapacitorApp (7.0.0):
+  - CapacitorApp (8.0.0):
     - Capacitor
-  - CapacitorCordova (7.0.0)
-  - CapacitorHaptics (7.0.0):
+  - CapacitorCordova (8.0.0)
+  - CapacitorHaptics (8.0.0):
     - Capacitor
-  - CapacitorKeyboard (7.0.0):
+  - CapacitorKeyboard (8.0.0):
     - Capacitor
-  - CapacitorMlkitBarcodeScanning (7.1.0):
+  - CapacitorMlkitBarcodeScanning (7.0.0-dev.1765885034):
     - Capacitor
-    - GoogleMLKit/BarcodeScanning (= 7.0.0)
-  - CapacitorMlkitDocumentScanner (7.2.1):
+    - GoogleMLKit/BarcodeScanning (~> 8.0.0)
+  - CapacitorMlkitDocumentScanner (7.0.0-dev.1765885034):
     - Capacitor
-  - CapacitorMlkitFaceDetection (7.1.0):
+  - CapacitorMlkitFaceDetection (7.0.0-dev.1765885034):
     - Capacitor
-    - GoogleMLKit/FaceDetection (= 7.0.0)
-  - CapacitorMlkitFaceMeshDetection (7.1.0):
+    - GoogleMLKit/FaceDetection (~> 8.0.0)
+  - CapacitorMlkitFaceMeshDetection (7.0.0-dev.1765885034):
     - Capacitor
-  - CapacitorMlkitSelfieSegmentation (7.1.0):
+  - CapacitorMlkitSelfieSegmentation (7.0.0-dev.1765885034):
     - Capacitor
-    - GoogleMLKit/SegmentationSelfie (= 7.0.0)
-  - CapacitorMlkitSubjectSegmentation (7.1.0):
+    - GoogleMLKit/SegmentationSelfie (~> 8.0.0)
+  - CapacitorMlkitSubjectSegmentation (7.0.0-dev.1765885034):
     - Capacitor
-  - CapacitorMlkitTranslation (7.1.0):
+  - CapacitorMlkitTranslation (7.0.0-dev.1765885034):
     - Capacitor
-    - GoogleMLKit/Translate (= 7.0.0)
-  - CapacitorStatusBar (7.0.0):
+    - GoogleMLKit/Translate (~> 8.0.0)
+  - CapacitorStatusBar (8.0.0):
     - Capacitor
-  - CapawesomeCapacitorFilePicker (7.0.0):
+  - CapawesomeCapacitorFilePicker (7.0.0-dev.1765885034):
     - Capacitor
   - GoogleDataTransport (10.1.0):
     - nanopb (~> 3.30910.0)
     - PromisesObjC (~> 2.4)
-  - GoogleMLKit/BarcodeScanning (7.0.0):
+  - GoogleMLKit/BarcodeScanning (8.0.0):
     - GoogleMLKit/MLKitCore
-    - MLKitBarcodeScanning (~> 6.0.0)
-  - GoogleMLKit/FaceDetection (7.0.0):
+    - MLKitBarcodeScanning (~> 7.0.0)
+  - GoogleMLKit/FaceDetection (8.0.0):
     - GoogleMLKit/MLKitCore
-    - MLKitFaceDetection (~> 6.0.0)
-  - GoogleMLKit/MLKitCore (7.0.0):
-    - MLKitCommon (~> 12.0.0)
-  - GoogleMLKit/SegmentationSelfie (7.0.0):
+    - MLKitFaceDetection (~> 7.0.0)
+  - GoogleMLKit/MLKitCore (8.0.0):
+    - MLKitCommon (~> 13.0.0)
+  - GoogleMLKit/SegmentationSelfie (8.0.0):
     - GoogleMLKit/MLKitCore
-    - MLKitSegmentationSelfie (~> 1.0.0-beta12)
-  - GoogleMLKit/Translate (7.0.0):
+    - MLKitSegmentationSelfie (~> 1.0.0-beta13)
+  - GoogleMLKit/Translate (8.0.0):
     - GoogleMLKit/MLKitCore
-    - MLKitTranslate (~> 6.0.0)
+    - MLKitTranslate (~> 7.0.0)
   - GoogleToolboxForMac/Defines (4.2.1)
   - GoogleToolboxForMac/Logger (4.2.1):
     - GoogleToolboxForMac/Defines (= 4.2.1)
@@ -54,53 +54,53 @@ PODS:
     - GoogleToolboxForMac/Defines (= 4.2.1)
   - GoogleToolboxForMac/StringEncoding (4.2.1):
     - GoogleToolboxForMac/Defines (= 4.2.1)
-  - GoogleUtilities/Environment (8.0.2):
+  - GoogleUtilities/Environment (8.1.0):
     - GoogleUtilities/Privacy
-  - GoogleUtilities/Logger (8.0.2):
+  - GoogleUtilities/Logger (8.1.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Privacy
-  - GoogleUtilities/Privacy (8.0.2)
-  - GoogleUtilities/UserDefaults (8.0.2):
+  - GoogleUtilities/Privacy (8.1.0)
+  - GoogleUtilities/UserDefaults (8.1.0):
     - GoogleUtilities/Logger
     - GoogleUtilities/Privacy
   - GTMSessionFetcher/Core (3.5.0)
-  - MLImage (1.0.0-beta6)
-  - MLKitBarcodeScanning (6.0.0):
-    - MLKitCommon (~> 12.0)
-    - MLKitVision (~> 8.0)
-  - MLKitCommon (12.0.0):
+  - MLImage (1.0.0-beta7)
+  - MLKitBarcodeScanning (7.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitVision (~> 9.0)
+  - MLKitCommon (13.0.0):
     - GoogleDataTransport (~> 10.0)
     - GoogleToolboxForMac/Logger (< 5.0, >= 4.2.1)
     - "GoogleToolboxForMac/NSData+zlib (< 5.0, >= 4.2.1)"
     - GoogleUtilities/Logger (~> 8.0)
     - GoogleUtilities/UserDefaults (~> 8.0)
     - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
-  - MLKitFaceDetection (6.0.0):
-    - MLKitCommon (~> 12.0)
-    - MLKitVision (~> 8.0)
-  - MLKitNaturalLanguage (8.0.0):
+  - MLKitFaceDetection (7.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitVision (~> 9.0)
+  - MLKitNaturalLanguage (9.0.0):
     - GoogleToolboxForMac/Logger (< 5.0, >= 4.2.1)
     - "GoogleToolboxForMac/NSData+zlib (< 5.0, >= 4.2.1)"
     - GoogleToolboxForMac/StringEncoding (< 5.0, >= 4.2.1)
     - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
-    - MLKitCommon (~> 12.0)
-  - MLKitSegmentationCommon (1.0.0-beta12):
-    - MLKitCommon (~> 12.0)
-    - MLKitXenoCommon (= 1.0.0-beta14)
-  - MLKitSegmentationSelfie (1.0.0-beta12):
-    - MLKitSegmentationCommon (= 1.0.0-beta12)
-  - MLKitTranslate (6.0.0):
-    - MLKitNaturalLanguage (~> 8.0)
+    - MLKitCommon (~> 13.0)
+  - MLKitSegmentationCommon (1.0.0-beta13):
+    - MLKitCommon (~> 13.0)
+    - MLKitXenoCommon (= 1.0.0-beta15)
+  - MLKitSegmentationSelfie (1.0.0-beta13):
+    - MLKitSegmentationCommon (= 1.0.0-beta13)
+  - MLKitTranslate (7.0.0):
+    - MLKitNaturalLanguage (~> 9.0)
     - SSZipArchive (< 3.0, >= 2.5.5)
-  - MLKitVision (8.0.0):
+  - MLKitVision (9.0.0):
     - GoogleToolboxForMac/Logger (< 5.0, >= 4.2.1)
     - "GoogleToolboxForMac/NSData+zlib (< 5.0, >= 4.2.1)"
     - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
-    - MLImage (= 1.0.0-beta6)
-    - MLKitCommon (~> 12.0)
-  - MLKitXenoCommon (1.0.0-beta14):
-    - MLKitCommon (~> 12.0)
-    - MLKitVision (~> 8.0)
+    - MLImage (= 1.0.0-beta7)
+    - MLKitCommon (~> 13.0)
+  - MLKitXenoCommon (1.0.0-beta15):
+    - MLKitCommon (~> 13.0)
+    - MLKitVision (~> 9.0)
   - nanopb (3.30910.0):
     - nanopb/decode (= 3.30910.0)
     - nanopb/encode (= 3.30910.0)
@@ -177,35 +177,35 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capawesome/capacitor-file-picker"
 
 SPEC CHECKSUMS:
-  Capacitor: 82d1f3b4480d66b5996814f74500dcbc0908558c
-  CapacitorApp: 9cb31064a6c6bb2b1438583733a7bf45557fc1da
-  CapacitorCordova: 345f93b7edd121db98e4ec20ac94d6d7bcaf7e48
-  CapacitorHaptics: 7be406a91e4eb87287f321c6c68e1709d6837b3a
-  CapacitorKeyboard: 4db71e694e7afb5d7c0be09b05495c19f7d6c914
-  CapacitorMlkitBarcodeScanning: 8ed3b0c5b015c0f65ecdaf8d99aaa08b4e647693
-  CapacitorMlkitDocumentScanner: 38146db0c2bc24aaa1799be7ce66cd6dd849ec6a
-  CapacitorMlkitFaceDetection: 482d998482d9cceba2c1e63b5f8ca96853a376e1
-  CapacitorMlkitFaceMeshDetection: 94ef867ca4558640f96603b080810a4fe5be6389
-  CapacitorMlkitSelfieSegmentation: 3b1431d17476e493adff6d87a5b685de09fa8945
-  CapacitorMlkitSubjectSegmentation: c50383699fe74ad6cbf944a79378d5f6d3f91feb
-  CapacitorMlkitTranslation: 2a9fac04f9a1625d8eb127145693fb71152a373d
-  CapacitorStatusBar: a8c4c83ed2e973bdafb979e80e4b00d027832cb7
-  CapawesomeCapacitorFilePicker: 14e5eef9b494c0ced87143d5c03ef690a79c9851
+  Capacitor: 341ff7cf652ec695d1a8ebf604db448ac7b6d635
+  CapacitorApp: 3963a84197280757b84f126afd1520a85ae3b092
+  CapacitorCordova: 5dc3912d25ef770a3fe0f431bb65c9fbfa2e92f9
+  CapacitorHaptics: 2079d9fa04c5a71e18663b4722323c304c58245c
+  CapacitorKeyboard: d7868c079a4d5277a3deca27a10a488fcbbb8b69
+  CapacitorMlkitBarcodeScanning: 12e784e21f4f10308c8b4253c94cbae33d4525b7
+  CapacitorMlkitDocumentScanner: d26393765ccc33e140051e9195b1fa31c12e1320
+  CapacitorMlkitFaceDetection: bacdcaff997704a2335f1cde45638f78f3a6f653
+  CapacitorMlkitFaceMeshDetection: ef14aae4e6123bbd65d5135580b50ae311f106f8
+  CapacitorMlkitSelfieSegmentation: 18f8fb52c338ff5c371417592d85f6ab486194d1
+  CapacitorMlkitSubjectSegmentation: 8b7f8f9b97cd306065fde354db661aa718a767aa
+  CapacitorMlkitTranslation: e59eec445f93227dd84d855577ddd890d0dfa79d
+  CapacitorStatusBar: 312e2e67928dfe9514c4a8916a1fd610552f5f35
+  CapawesomeCapacitorFilePicker: 37ffe33ab8e5340fba712b145a551a7fe910eeb9
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
-  GoogleMLKit: eff9e23ec1d90ea4157a1ee2e32a4f610c5b3318
+  GoogleMLKit: ddd51d7dff36ff28defa69afedd9cdce684fd857
   GoogleToolboxForMac: d1a2cbf009c453f4d6ded37c105e2f67a32206d8
-  GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
+  GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1
   GTMSessionFetcher: 5aea5ba6bd522a239e236100971f10cb71b96ab6
-  MLImage: 0ad1c5f50edd027672d8b26b0fee78a8b4a0fc56
-  MLKitBarcodeScanning: 0a3064da0a7f49ac24ceb3cb46a5bc67496facd2
-  MLKitCommon: 07c2c33ae5640e5380beaaa6e4b9c249a205542d
-  MLKitFaceDetection: 2a593db4837db503ad3426b565e7aab045cefea5
-  MLKitNaturalLanguage: 1faece38017b0cf8eb49ac69cff10cb419f68c01
-  MLKitSegmentationCommon: a172e593007cb4c2637276280ea7bc4dd8a4ca3e
-  MLKitSegmentationSelfie: 9a70d110d1ab62bab31bf3337727d1dfeb98cbe8
-  MLKitTranslate: 2082cce437292f2f7477bfef02022ef69d8e77aa
-  MLKitVision: 45e79d68845a2de77e2dd4d7f07947f0ed157b0e
-  MLKitXenoCommon: ce5047943af6b4be7ae035dd81b3a56fdb29aab3
+  MLImage: 2ab9c968e75f57911c16f4c9d9e8a8e9604a86a1
+  MLKitBarcodeScanning: 72c6437f13a900833b400136be53a8a5d86f42fa
+  MLKitCommon: 26b779f072a182c1603d4c88a101c350cac837b1
+  MLKitFaceDetection: d50aff1a44aa9a4e95f7e208298a3ce40b68f9f8
+  MLKitNaturalLanguage: 4c5580068109aaea85809981b8c4cb4675b2100f
+  MLKitSegmentationCommon: 2b745e791948849011bfd34dd19be83a4895b14b
+  MLKitSegmentationSelfie: 72895c53eaf634b6efd8236a329e552bdf239383
+  MLKitTranslate: ab71c9e4a67cc79756d4dae013e47edfca3b57cb
+  MLKitVision: fa8dea9012ac59497c79ddbe9ebf32051047ac4c
+  MLKitXenoCommon: d6f30a3235d21f5d7e85ec3b6015d3b21ff38ba1
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   SSZipArchive: 8a6ee5677c8e304bebc109e39cf0da91ccef22ea
