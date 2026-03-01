@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import {
   AlertController,
   LoadingController,
@@ -16,12 +16,10 @@ import {
   providedIn: 'root',
 })
 export class DialogService {
-  constructor(
-    private alertCtrl: AlertController,
-    private modalCtrl: ModalController,
-    private loadingCtrl: LoadingController,
-    private popoverCtrl: PopoverController,
-  ) {}
+  private alertCtrl = inject(AlertController);
+  private modalCtrl = inject(ModalController);
+  private loadingCtrl = inject(LoadingController);
+  private popoverCtrl = inject(PopoverController);
 
   public async dismissModal(data?: any): Promise<boolean> {
     return this.modalCtrl.dismiss(data);

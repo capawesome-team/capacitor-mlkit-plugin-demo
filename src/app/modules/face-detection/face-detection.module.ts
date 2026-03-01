@@ -6,7 +6,6 @@ import { FaceDetectionRoutingModule } from './face-detection-routing.module';
 import { FaceDetectionPage } from './face-detection.page';
 
 @NgModule({
-  imports: [SharedModule, FaceDetectionRoutingModule],
-  declarations: [FaceDetectionPage],
+  imports: [SharedModule, FaceDetectionRoutingModule, FaceDetectionPage],
 })
 export class FaceDetectionModule {}

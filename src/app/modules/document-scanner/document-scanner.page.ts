@@ -1,6 +1,11 @@
-import { Component, NgZone, OnInit } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import { Component, NgZone, OnInit, inject } from '@angular/core';
+import {
+  ReactiveFormsModule,
+  UntypedFormControl,
+  UntypedFormGroup,
+} from '@angular/forms';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { IonicModule } from '@ionic/angular';
 import {
   DocumentScanner,
   ScanOptions,
@@ -14,8 +19,12 @@ import { Capacitor } from '@capacitor/core';
   selector: 'app-document-scanner',
   templateUrl: './document-scanner.page.html',
   styleUrls: ['./document-scanner.page.scss'],
+  imports: [IonicModule, ReactiveFormsModule],
 })
 export class DocumentScannerPage implements OnInit {
+  private readonly domSanitizer = inject(DomSanitizer);
+  private readonly ngZone = inject(NgZone);
+
   public readonly scannerMode = {
     FULL: 'FULL',
     BASE: 'BASE',
@@ -44,11 +53,6 @@ export class DocumentScannerPage implements OnInit {
 
   private readonly GH_URL =
     'https://github.com/capawesome-team/capacitor-mlkit';
-
-  constructor(
-    private readonly domSanitizer: DomSanitizer,
-    private readonly ngZone: NgZone,
-  ) {}
 
   public ngOnInit(): void {
     this.checkModuleAvailability();

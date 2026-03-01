@@ -1,5 +1,10 @@
-import { Component, NgZone, OnInit } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import { Component, NgZone, OnInit, inject } from '@angular/core';
+import {
+  ReactiveFormsModule,
+  UntypedFormControl,
+  UntypedFormGroup,
+} from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 import { DialogService } from '@app/core';
 import {
   Barcode,
@@ -14,8 +19,12 @@ import { BarcodeScanningModalComponent } from './barcode-scanning-modal.componen
   selector: 'app-barcode-scanning',
   templateUrl: './barcode-scanning.page.html',
   styleUrls: ['./barcode-scanning.page.scss'],
+  imports: [IonicModule, ReactiveFormsModule],
 })
 export class BarcodeScanningPage implements OnInit {
+  private readonly dialogService = inject(DialogService);
+  private readonly ngZone = inject(NgZone);
+
   public readonly barcodeFormat = BarcodeFormat;
   public readonly lensFacing = LensFacing;
 
@@ -31,11 +40,6 @@ export class BarcodeScanningPage implements OnInit {
 
   private readonly GH_URL =
     'https://github.com/capawesome-team/capacitor-barcode-scanning';
-
-  constructor(
-    private readonly dialogService: DialogService,
-    private readonly ngZone: NgZone,
-  ) {}
 
   public ngOnInit(): void {
     BarcodeScanner.isSupported().then((result) => {

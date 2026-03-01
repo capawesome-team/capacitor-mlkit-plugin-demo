@@ -1,4 +1,4 @@
-import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { NgModule, inject } from '@angular/core';
 
 @NgModule({
   imports: [],
@@ -6,7 +6,9 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
   exports: [],
 })
 export class CoreModule {
-  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+  constructor() {
+    const parentModule = inject(CoreModule, { optional: true, skipSelf: true });
+
     if (parentModule) {
       throw new Error(
         'CoreModule is already loaded. Import it in the AppModule only.',

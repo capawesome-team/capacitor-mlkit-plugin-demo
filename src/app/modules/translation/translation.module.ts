@@ -6,7 +6,6 @@ import { TranslationRoutingModule } from './translation-routing.module';
 import { TranslationPage } from './translation.page';
 
 @NgModule({
-  imports: [SharedModule, TranslationRoutingModule],
-  declarations: [TranslationPage],
+  imports: [SharedModule, TranslationRoutingModule, TranslationPage],
 })
 export class TranslationModule {}

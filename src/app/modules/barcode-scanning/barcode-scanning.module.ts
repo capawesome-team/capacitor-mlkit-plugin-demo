@@ -7,7 +7,11 @@ import { BarcodeScanningModalComponent } from './barcode-scanning-modal.componen
 import { BarcodeScanningPage } from './barcode-scanning.page';
 
 @NgModule({
-  imports: [SharedTestingModule, BarcodeScanningRoutingModule],
-  declarations: [BarcodeScanningPage, BarcodeScanningModalComponent],
+  imports: [
+    SharedTestingModule,
+    BarcodeScanningRoutingModule,
+    BarcodeScanningPage,
+    BarcodeScanningModalComponent,
+  ],
 })
 export class BarcodeScanningModule {}

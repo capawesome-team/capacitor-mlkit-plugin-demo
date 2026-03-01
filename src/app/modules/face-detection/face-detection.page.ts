@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import {
+  ReactiveFormsModule,
+  UntypedFormControl,
+  UntypedFormGroup,
+} from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 import {
   ClassificationMode,
   ContourMode,
@@ -17,6 +22,7 @@ import { FilePicker } from '@capawesome/capacitor-file-picker';
   selector: 'app-face-detection',
   templateUrl: './face-detection.page.html',
   styleUrls: ['./face-detection.page.scss'],
+  imports: [IonicModule, ReactiveFormsModule],
 })
 export class FaceDetectionPage implements OnInit {
   public readonly performanceMode = PerformanceMode;

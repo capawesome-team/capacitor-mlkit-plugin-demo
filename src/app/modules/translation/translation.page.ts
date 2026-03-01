@@ -1,11 +1,18 @@
+import { KeyValuePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import {
+  ReactiveFormsModule,
+  UntypedFormControl,
+  UntypedFormGroup,
+} from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 import { Language, Translation } from '@capacitor-mlkit/translation';
 
 @Component({
   selector: 'app-translation',
   templateUrl: './translation.page.html',
   styleUrls: ['./translation.page.scss'],
+  imports: [IonicModule, ReactiveFormsModule, KeyValuePipe],
 })
 export class TranslationPage implements OnInit {
   public readonly language = Language;

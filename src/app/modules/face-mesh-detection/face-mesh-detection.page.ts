@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import {
+  ReactiveFormsModule,
+  UntypedFormControl,
+  UntypedFormGroup,
+} from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 import {
   FaceMesh,
   FaceMeshDetection,
@@ -7,11 +12,25 @@ import {
   UseCase,
 } from '@capacitor-mlkit/face-mesh-detection';
 import { FilePicker } from '@capawesome/capacitor-file-picker';
+import {
+  ContourDescriptionPipe,
+  ContourPipe,
+  ContourTitlePipe,
+  KeysPipe,
+} from './face-mesh-detection.pipe';
 
 @Component({
   selector: 'app-face-mesh-detection',
   templateUrl: './face-mesh-detection.page.html',
   styleUrls: ['./face-mesh-detection.page.scss'],
+  imports: [
+    IonicModule,
+    ReactiveFormsModule,
+    KeysPipe,
+    ContourTitlePipe,
+    ContourDescriptionPipe,
+    ContourPipe,
+  ],
 })
 export class FaceMeshDetectionPage {
   public readonly useCase = UseCase;

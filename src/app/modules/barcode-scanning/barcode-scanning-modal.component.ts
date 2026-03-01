@@ -6,6 +6,7 @@ import {
   NgZone,
   OnDestroy,
   ViewChild,
+  inject,
 } from '@angular/core';
 import { DialogService } from '@app/core';
 import {
@@ -16,7 +17,7 @@ import {
   StartScanOptions,
 } from '@capacitor-mlkit/barcode-scanning';
 import { Capacitor } from '@capacitor/core';
-import { InputCustomEvent } from '@ionic/angular';
+import { InputCustomEvent, IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-barcode-scanning',
@@ -90,8 +91,12 @@ import { InputCustomEvent } from '@ionic/angular';
       }
     `,
   ],
+  imports: [IonicModule],
 })
 export class BarcodeScanningModalComponent implements AfterViewInit, OnDestroy {
+  private readonly dialogService = inject(DialogService);
+  private readonly ngZone = inject(NgZone);
+
   @Input()
   public formats: BarcodeFormat[] = [];
   @Input()
@@ -107,11 +112,6 @@ export class BarcodeScanningModalComponent implements AfterViewInit, OnDestroy {
   public isWeb = Capacitor.getPlatform() === 'web';
   public minZoomRatio: number | undefined;
   public maxZoomRatio: number | undefined;
-
-  constructor(
-    private readonly dialogService: DialogService,
-    private readonly ngZone: NgZone,
-  ) {}
 
   public ngAfterViewInit(): void {
     setTimeout(() => {

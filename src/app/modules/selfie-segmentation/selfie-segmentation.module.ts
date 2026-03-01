@@ -6,7 +6,10 @@ import { SelfieSegmentationRoutingModule } from './selfie-segmentation-routing.m
 import { SelfieSegmentationPage } from './selfie-segmentation.page';
 
 @NgModule({
-  imports: [SharedModule, SelfieSegmentationRoutingModule],
-  declarations: [SelfieSegmentationPage],
+  imports: [
+    SharedModule,
+    SelfieSegmentationRoutingModule,
+    SelfieSegmentationPage,
+  ],
 })
 export class SelfieSegmentationModule {}

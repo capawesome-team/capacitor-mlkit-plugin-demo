@@ -6,7 +6,10 @@ import { SubjectSegmentationRoutingModule } from './subject-segmentation-routing
 import { SubjectSegmentationPage } from './subject-segmentation.page';
 
 @NgModule({
-  imports: [SharedModule, SubjectSegmentationRoutingModule],
-  declarations: [SubjectSegmentationPage],
+  imports: [
+    SharedModule,
+    SubjectSegmentationRoutingModule,
+    SubjectSegmentationPage,
+  ],
 })
 export class SubjectSegmentationModule {}

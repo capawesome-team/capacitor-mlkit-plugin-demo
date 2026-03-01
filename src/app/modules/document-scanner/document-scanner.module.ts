@@ -6,7 +6,6 @@ import { DocumentScannerRoutingModule } from './document-scanner-routing.module'
 import { DocumentScannerPage } from './document-scanner.page';
 
 @NgModule({
-  imports: [SharedModule, DocumentScannerRoutingModule],
-  declarations: [DocumentScannerPage],
+  imports: [SharedModule, DocumentScannerRoutingModule, DocumentScannerPage],
 })
 export class DocumentScannerModule {}

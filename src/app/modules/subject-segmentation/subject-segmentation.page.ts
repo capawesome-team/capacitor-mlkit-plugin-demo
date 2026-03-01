@@ -1,5 +1,10 @@
-import { Component } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import {
+  ReactiveFormsModule,
+  UntypedFormControl,
+  UntypedFormGroup,
+} from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import {
   ProcessImageResult,
@@ -12,8 +17,11 @@ import { FilePicker } from '@capawesome/capacitor-file-picker';
   selector: 'app-subject-segmentation',
   templateUrl: './subject-segmentation.page.html',
   styleUrls: ['./subject-segmentation.page.scss'],
+  imports: [IonicModule, ReactiveFormsModule],
 })
 export class SubjectSegmentationPage {
+  private readonly domSanitizer = inject(DomSanitizer);
+
   public formGroup = new UntypedFormGroup({
     width: new UntypedFormControl(512),
     height: new UntypedFormControl(),
@@ -23,8 +31,6 @@ export class SubjectSegmentationPage {
 
   private readonly githubUrl =
     'https://github.com/capawesome-team/capacitor-mlkit';
-
-  constructor(private readonly domSanitizer: DomSanitizer) {}
 
   public openOnGithub(): void {
     window.open(this.githubUrl, '_blank');
