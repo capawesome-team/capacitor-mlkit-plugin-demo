@@ -1,3 +1,6 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+/AndroidProjectSystem.xml
+/deviceManager.xml
+/migrations.xml

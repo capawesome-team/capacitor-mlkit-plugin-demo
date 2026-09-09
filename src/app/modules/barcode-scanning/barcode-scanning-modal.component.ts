@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectorRef,
   Component,
   ElementRef,
   Input,
@@ -17,7 +18,24 @@ import {
   StartScanOptions,
 } from '@capacitor-mlkit/barcode-scanning';
 import { Capacitor } from '@capacitor/core';
-import { InputCustomEvent, IonicModule } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { close, flashlight } from 'ionicons/icons';
+import {
+  InputCustomEvent,
+  IonButton,
+  IonButtons,
+  IonContent,
+  IonFab,
+  IonFabButton,
+  IonHeader,
+  IonIcon,
+  IonRange,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular';
+
+// Standalone `ion-icon` resolves names from the icon registry.
+addIcons({ close, flashlight });
 
 @Component({
   selector: 'app-barcode-scanning',
@@ -91,11 +109,23 @@ import { InputCustomEvent, IonicModule } from '@ionic/angular';
       }
     `,
   ],
-  imports: [IonicModule],
+  imports: [
+    IonButton,
+    IonButtons,
+    IonContent,
+    IonFab,
+    IonFabButton,
+    IonHeader,
+    IonIcon,
+    IonRange,
+    IonTitle,
+    IonToolbar,
+  ],
 })
 export class BarcodeScanningModalComponent implements AfterViewInit, OnDestroy {
   private readonly dialogService = inject(DialogService);
   private readonly ngZone = inject(NgZone);
+  private readonly changeDetectorRef = inject(ChangeDetectorRef);
 
   @Input()
   public formats: BarcodeFormat[] = [];
@@ -121,6 +151,7 @@ export class BarcodeScanningModalComponent implements AfterViewInit, OnDestroy {
         }
         BarcodeScanner.isTorchAvailable().then((result) => {
           this.isTorchAvailable = result.available;
+          this.changeDetectorRef.markForCheck();
         });
       });
     }, 500);
@@ -225,9 +256,11 @@ export class BarcodeScanningModalComponent implements AfterViewInit, OnDestroy {
     if (Capacitor.getPlatform() !== 'web') {
       void BarcodeScanner.getMinZoomRatio().then((result) => {
         this.minZoomRatio = result.zoomRatio;
+        this.changeDetectorRef.markForCheck();
       });
       void BarcodeScanner.getMaxZoomRatio().then((result) => {
         this.maxZoomRatio = result.zoomRatio;
+        this.changeDetectorRef.markForCheck();
       });
     }
   }

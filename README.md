@@ -1,10 +1,10 @@
 # capacitor-mlkit-plugin-demo
 
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/robingenz/capacitor-mlkit-plugin-demo/ci.yml?branch=main)](https://github.com/robingenz/capacitor-mlkit-plugin-demo/actions)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/capawesome-team/capacitor-mlkit-plugin-demo/ci.yml?branch=main)](https://github.com/capawesome-team/capacitor-mlkit-plugin-demo/actions)
 
-<!-- [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/robingenz/capacitor-mlkit-plugin-demo?color=brightgreen&label=version)](https://github.com/robingenz/capacitor-mlkit-plugin-demo/releases) -->
+<!-- [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/capawesome-team/capacitor-mlkit-plugin-demo?color=brightgreen&label=version)](https://github.com/capawesome-team/capacitor-mlkit-plugin-demo/releases) -->
 
-⚡️ Simple Ionic Angular app to demonstrate the use of certain Capacitor plugins.
+⚡️ Simple Ionic Angular app to demonstrate the use of certain Capacitor ML Kit plugins.
 
 <div class="capawesome-z29o10a">
   <a href="https://cloud.capawesome.io/" target="_blank">
@@ -16,17 +16,20 @@
 
 The following plugins are included:
 
-- [capacitor-mlkit/barcode-scanning](https://capawesome.io/plugins/mlkit/barcode-scanning/)
-- [capacitor-mlkit/face-detection](https://capawesome.io/plugins/mlkit/face-detection/)
-- [capacitor-mlkit/selfie-segmentation](https://capawesome.io/plugins/mlkit/selfie-segmentation/)
-- [capacitor-mlkit/subject-segmentation](https://capawesome.io/plugins/mlkit/subject-segmentation/)
-- [capacitor-mlkit/translation](https://capawesome.io/plugins/mlkit/translation/)
+- [capacitor-mlkit/barcode-scanning](https://capawesome.io/docs/sdks/capacitor/mlkit/barcode-scanning/)
+- [capacitor-mlkit/document-scanner](https://capawesome.io/docs/sdks/capacitor/mlkit/document-scanner/)
+- [capacitor-mlkit/face-detection](https://capawesome.io/docs/sdks/capacitor/mlkit/face-detection/)
+- [capacitor-mlkit/face-mesh-detection](https://capawesome.io/docs/sdks/capacitor/mlkit/face-mesh-detection/)
+- [capacitor-mlkit/selfie-segmentation](https://capawesome.io/docs/sdks/capacitor/mlkit/selfie-segmentation/)
+- [capacitor-mlkit/subject-segmentation](https://capawesome.io/docs/sdks/capacitor/mlkit/subject-segmentation/)
+- [capacitor-mlkit/translation](https://capawesome.io/docs/sdks/capacitor/mlkit/translation/)
 
 ## Development Setup 💻
 
 ### Prerequisites
 
 - Install [Node.js](https://nodejs.org) which includes [Node Package Manager](https://www.npmjs.com/get-npm)
+  (`^22.22.3 || ^24.15.0 || >=26.0.0`, as required by Angular)
 - Android development: Install [Android Studio](https://developer.android.com/studio)
 - iOS development: Install [XCode](https://apps.apple.com/de/app/xcode/id497799835?mt=12)
 
@@ -35,7 +38,7 @@ The following plugins are included:
 Clone this repository:
 
 ```
-git clone https://github.com/robingenz/capacitor-mlkit-plugin-demo.git
+git clone https://github.com/capawesome-team/capacitor-mlkit-plugin-demo.git
 ```
 
 Change to the root directory of the project:
@@ -68,8 +71,8 @@ This project uses [Ionic](https://ionicframework.com/) as app development platfo
 
 <!-- ## Changelog
 
-See [CHANGELOG.md](https://github.com/robingenz/capacitor-mlkit-plugin-demo/blob/main/CHANGELOG.md). -->
+See [CHANGELOG.md](https://github.com/capawesome-team/capacitor-mlkit-plugin-demo/blob/main/CHANGELOG.md). -->
 
 ## License
 
-See [LICENSE](https://github.com/robingenz/capacitor-mlkit-plugin-demo/blob/main/LICENSE).
+See [LICENSE](https://github.com/capawesome-team/capacitor-mlkit-plugin-demo/blob/main/LICENSE).

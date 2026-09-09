@@ -1,11 +1,38 @@
-import { Component, NgZone, OnInit, inject } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  NgZone,
+  OnInit,
+  inject,
+} from '@angular/core';
 import {
   ReactiveFormsModule,
   UntypedFormControl,
   UntypedFormGroup,
 } from '@angular/forms';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
-import { IonicModule } from '@ionic/angular';
+import {
+  IonBackButton,
+  IonButton,
+  IonButtons,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
+  IonCheckbox,
+  IonCol,
+  IonContent,
+  IonHeader,
+  IonInput,
+  IonItem,
+  IonLabel,
+  IonRow,
+  IonSelect,
+  IonSelectOption,
+  IonThumbnail,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular';
 import {
   DocumentScanner,
   ScanOptions,
@@ -19,11 +46,34 @@ import { Capacitor } from '@capacitor/core';
   selector: 'app-document-scanner',
   templateUrl: './document-scanner.page.html',
   styleUrls: ['./document-scanner.page.scss'],
-  imports: [IonicModule, ReactiveFormsModule],
+  imports: [
+    IonBackButton,
+    IonButton,
+    IonButtons,
+    IonCard,
+    IonCardContent,
+    IonCardHeader,
+    IonCardTitle,
+    IonCheckbox,
+    IonCol,
+    IonContent,
+    IonHeader,
+    IonInput,
+    IonItem,
+    IonLabel,
+    IonRow,
+    IonSelect,
+    IonSelectOption,
+    IonThumbnail,
+    IonTitle,
+    IonToolbar,
+    ReactiveFormsModule,
+  ],
 })
 export class DocumentScannerPage implements OnInit {
   private readonly domSanitizer = inject(DomSanitizer);
   private readonly ngZone = inject(NgZone);
+  private readonly changeDetectorRef = inject(ChangeDetectorRef);
 
   public readonly scannerMode = {
     FULL: 'FULL',
@@ -71,6 +121,7 @@ export class DocumentScannerPage implements OnInit {
     try {
       const result = await DocumentScanner.scanDocument(options);
       this.scanResult = result;
+      this.changeDetectorRef.markForCheck();
     } catch (error) {
       console.error('Error scanning document:', error);
     }
@@ -81,9 +132,11 @@ export class DocumentScannerPage implements OnInit {
       const result =
         await DocumentScanner.isGoogleDocumentScannerModuleAvailable();
       this.isModuleAvailable = result.available;
+      this.changeDetectorRef.markForCheck();
     } catch (error) {
       console.error('Error checking module availability:', error);
       this.isModuleAvailable = false;
+      this.changeDetectorRef.markForCheck();
     }
   }
 

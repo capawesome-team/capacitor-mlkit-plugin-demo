@@ -1,10 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
 import {
   ReactiveFormsModule,
   UntypedFormControl,
   UntypedFormGroup,
 } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import {
+  IonBackButton,
+  IonButton,
+  IonButtons,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCheckbox,
+  IonCol,
+  IonContent,
+  IonHeader,
+  IonInput,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonListHeader,
+  IonRange,
+  IonRow,
+  IonSelect,
+  IonSelectOption,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular';
 import {
   ClassificationMode,
   ContourMode,
@@ -22,9 +46,36 @@ import { FilePicker } from '@capawesome/capacitor-file-picker';
   selector: 'app-face-detection',
   templateUrl: './face-detection.page.html',
   styleUrls: ['./face-detection.page.scss'],
-  imports: [IonicModule, ReactiveFormsModule],
+  imports: [
+    IonBackButton,
+    IonButton,
+    IonButtons,
+    IonCard,
+    IonCardContent,
+    IonCardHeader,
+    IonCardSubtitle,
+    IonCardTitle,
+    IonCheckbox,
+    IonCol,
+    IonContent,
+    IonHeader,
+    IonInput,
+    IonItem,
+    IonLabel,
+    IonList,
+    IonListHeader,
+    IonRange,
+    IonRow,
+    IonSelect,
+    IonSelectOption,
+    IonTitle,
+    IonToolbar,
+    ReactiveFormsModule,
+  ],
 })
 export class FaceDetectionPage implements OnInit {
+  private readonly changeDetectorRef = inject(ChangeDetectorRef);
+
   public readonly performanceMode = PerformanceMode;
 
   public readonly contourMode = ContourMode;
@@ -94,6 +145,7 @@ export class FaceDetectionPage implements OnInit {
       enableTracking: enableTracking,
     });
     this.faces = faces;
+    this.changeDetectorRef.markForCheck();
   }
 
   public getLandmarkType(type: LandmarkType) {

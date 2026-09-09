@@ -1,10 +1,32 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import {
   ReactiveFormsModule,
   UntypedFormControl,
   UntypedFormGroup,
 } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import {
+  IonBackButton,
+  IonButton,
+  IonButtons,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonHeader,
+  IonInput,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonListHeader,
+  IonRow,
+  IonSelect,
+  IonSelectOption,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular';
 import {
   FaceMesh,
   FaceMeshDetection,
@@ -24,7 +46,27 @@ import {
   templateUrl: './face-mesh-detection.page.html',
   styleUrls: ['./face-mesh-detection.page.scss'],
   imports: [
-    IonicModule,
+    IonBackButton,
+    IonButton,
+    IonButtons,
+    IonCard,
+    IonCardContent,
+    IonCardHeader,
+    IonCardSubtitle,
+    IonCardTitle,
+    IonCol,
+    IonContent,
+    IonHeader,
+    IonInput,
+    IonItem,
+    IonLabel,
+    IonList,
+    IonListHeader,
+    IonRow,
+    IonSelect,
+    IonSelectOption,
+    IonTitle,
+    IonToolbar,
     ReactiveFormsModule,
     KeysPipe,
     ContourTitlePipe,
@@ -33,6 +75,8 @@ import {
   ],
 })
 export class FaceMeshDetectionPage {
+  private readonly changeDetectorRef = inject(ChangeDetectorRef);
+
   public readonly useCase = UseCase;
 
   public formGroup = new UntypedFormGroup({
@@ -65,6 +109,7 @@ export class FaceMeshDetectionPage {
       useCase: useCase,
     });
     this.faceMeshs = faceMeshs;
+    this.changeDetectorRef.markForCheck();
   }
 
   public getPoint(point: Point3D) {

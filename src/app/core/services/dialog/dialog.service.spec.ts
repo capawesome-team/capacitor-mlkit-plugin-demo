@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import {
   AlertController,
-  AngularDelegate,
   LoadingController,
   ModalController,
   PopoverController,
 } from '@ionic/angular';
+import { AngularDelegate } from '@ionic/angular/common';
 import { SharedTestingModule } from '@tests/modules';
 import { DialogService } from './dialog.service';
 

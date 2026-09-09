@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { provideIonicAngular } from '@ionic/angular';
 
 import { BarcodeScanningPage } from './barcode-scanning.page';
 
@@ -9,8 +9,8 @@ describe('BarcodeScanningPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [BarcodeScanningPage],
-      imports: [IonicModule.forRoot()],
+      imports: [BarcodeScanningPage],
+      providers: [provideIonicAngular()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(BarcodeScanningPage);

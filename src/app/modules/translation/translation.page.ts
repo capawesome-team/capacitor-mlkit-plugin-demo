@@ -1,20 +1,62 @@
 import { KeyValuePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
 import {
   ReactiveFormsModule,
   UntypedFormControl,
   UntypedFormGroup,
 } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import {
+  IonBackButton,
+  IonButton,
+  IonButtons,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonHeader,
+  IonInput,
+  IonItem,
+  IonLabel,
+  IonRow,
+  IonSelect,
+  IonSelectOption,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular';
 import { Language, Translation } from '@capacitor-mlkit/translation';
 
 @Component({
   selector: 'app-translation',
   templateUrl: './translation.page.html',
   styleUrls: ['./translation.page.scss'],
-  imports: [IonicModule, ReactiveFormsModule, KeyValuePipe],
+  imports: [
+    IonBackButton,
+    IonButton,
+    IonButtons,
+    IonCard,
+    IonCardContent,
+    IonCardHeader,
+    IonCardTitle,
+    IonCol,
+    IonContent,
+    IonHeader,
+    IonInput,
+    IonItem,
+    IonLabel,
+    IonRow,
+    IonSelect,
+    IonSelectOption,
+    IonTitle,
+    IonToolbar,
+    ReactiveFormsModule,
+    KeyValuePipe,
+  ],
 })
 export class TranslationPage implements OnInit {
+  private readonly changeDetectorRef = inject(ChangeDetectorRef);
+
   public readonly language = Language;
   public translateFormGroup = new UntypedFormGroup({
     text: new UntypedFormControl(''),
@@ -57,6 +99,7 @@ export class TranslationPage implements OnInit {
       }
     }
     this.disableSaveModelsButton = false;
+    this.changeDetectorRef.markForCheck();
   }
 
   public async getDownloadedModels(): Promise<void> {

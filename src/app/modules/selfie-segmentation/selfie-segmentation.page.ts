@@ -1,10 +1,28 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import {
   ReactiveFormsModule,
   UntypedFormControl,
   UntypedFormGroup,
 } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import {
+  IonBackButton,
+  IonButton,
+  IonButtons,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonHeader,
+  IonInput,
+  IonItem,
+  IonLabel,
+  IonRange,
+  IonRow,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import {
   ProcessImageResult,
@@ -17,10 +35,30 @@ import { FilePicker } from '@capawesome/capacitor-file-picker';
   selector: 'app-selfie-segmentation',
   templateUrl: './selfie-segmentation.page.html',
   styleUrls: ['./selfie-segmentation.page.scss'],
-  imports: [IonicModule, ReactiveFormsModule],
+  imports: [
+    IonBackButton,
+    IonButton,
+    IonButtons,
+    IonCard,
+    IonCardContent,
+    IonCardHeader,
+    IonCardTitle,
+    IonCol,
+    IonContent,
+    IonHeader,
+    IonInput,
+    IonItem,
+    IonLabel,
+    IonRange,
+    IonRow,
+    IonTitle,
+    IonToolbar,
+    ReactiveFormsModule,
+  ],
 })
 export class SelfieSegmentationPage {
   private readonly domSanitizer = inject(DomSanitizer);
+  private readonly changeDetectorRef = inject(ChangeDetectorRef);
 
   public formGroup = new UntypedFormGroup({
     width: new UntypedFormControl(512),
@@ -58,6 +96,7 @@ export class SelfieSegmentationPage {
       confidence: confidence / 10.0,
     });
     this.result = result;
+    this.changeDetectorRef.markForCheck();
   }
 
   public convertPathToWebPath(path: string): SafeUrl {

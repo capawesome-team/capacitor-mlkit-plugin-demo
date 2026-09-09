@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import { provideIonicAngular } from '@ionic/angular';
 
 import { DocumentScannerPage } from './document-scanner.page';
 
@@ -9,8 +9,8 @@ describe('DocumentScannerPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [DocumentScannerPage],
-      imports: [IonicModule.forRoot()],
+      imports: [DocumentScannerPage],
+      providers: [provideIonicAngular()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(DocumentScannerPage);

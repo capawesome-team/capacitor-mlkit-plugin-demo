@@ -1,34 +1,34 @@
 PODS:
-  - Capacitor (8.1.0):
+  - Capacitor (8.5.1):
     - CapacitorCordova
-  - CapacitorApp (8.0.1):
+  - CapacitorApp (8.1.1):
     - Capacitor
-  - CapacitorCordova (8.1.0)
-  - CapacitorHaptics (8.0.1):
+  - CapacitorCordova (8.5.1)
+  - CapacitorHaptics (8.0.2):
     - Capacitor
-  - CapacitorKeyboard (8.0.1):
+  - CapacitorKeyboard (8.0.5):
     - Capacitor
-  - CapacitorMlkitBarcodeScanning (8.0.1):
+  - CapacitorMlkitBarcodeScanning (8.1.1):
     - Capacitor
     - GoogleMLKit/BarcodeScanning (~> 8.0.0)
-  - CapacitorMlkitDocumentScanner (8.0.1):
+  - CapacitorMlkitDocumentScanner (8.1.1):
     - Capacitor
-  - CapacitorMlkitFaceDetection (8.0.1):
+  - CapacitorMlkitFaceDetection (8.1.1):
     - Capacitor
     - GoogleMLKit/FaceDetection (~> 8.0.0)
-  - CapacitorMlkitFaceMeshDetection (8.0.1):
+  - CapacitorMlkitFaceMeshDetection (8.1.1):
     - Capacitor
-  - CapacitorMlkitSelfieSegmentation (8.0.1):
+  - CapacitorMlkitSelfieSegmentation (8.1.1):
     - Capacitor
     - GoogleMLKit/SegmentationSelfie (~> 8.0.0)
-  - CapacitorMlkitSubjectSegmentation (8.0.1):
+  - CapacitorMlkitSubjectSegmentation (8.1.1):
     - Capacitor
-  - CapacitorMlkitTranslation (8.0.1):
+  - CapacitorMlkitTranslation (8.1.1):
     - Capacitor
     - GoogleMLKit/Translate (~> 8.0.0)
-  - CapacitorStatusBar (8.0.1):
+  - CapacitorStatusBar (8.0.3):
     - Capacitor
-  - CapawesomeCapacitorFilePicker (8.0.2):
+  - CapawesomeCapacitorFilePicker (8.1.0):
     - Capacitor
   - GoogleDataTransport (10.1.0):
     - nanopb (~> 3.30910.0)
@@ -177,20 +177,20 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capawesome/capacitor-file-picker"
 
 SPEC CHECKSUMS:
-  Capacitor: 47b825120c6b8b6d6f9f053e9350a8960d436710
-  CapacitorApp: 942306cd1acf7774a00e89a3986af3a67c8cad7a
-  CapacitorCordova: e8b76fd95fc1e157775abc484c59cc0de464095d
-  CapacitorHaptics: 4df2c625445cef39b67ea635a21802bc92df3b82
-  CapacitorKeyboard: 867eb4b3c901d9bb5c3d0c93b546185d52484e19
-  CapacitorMlkitBarcodeScanning: d97b2398adb4a8686fce9b1c0c6f09623f1baae8
-  CapacitorMlkitDocumentScanner: b225330cbf1d98cd26c94651c1206183a74f55f2
-  CapacitorMlkitFaceDetection: d22e54999dfe767941922423437487c661fbec33
-  CapacitorMlkitFaceMeshDetection: 864151854bfa0013e70e0dc721684fd8cce9ffd6
-  CapacitorMlkitSelfieSegmentation: 2c4258d9a1244d092630dba60214fdabb2af19d5
-  CapacitorMlkitSubjectSegmentation: 510bdf9b3316e3401dfcf548d81d43410c022e12
-  CapacitorMlkitTranslation: 9948cd3cb9db122301a080b20aed6699c9847445
-  CapacitorStatusBar: 32206abd53b14f339763da26f71286deaa891e16
-  CapawesomeCapacitorFilePicker: eb29fb54c59614fede51e0e0fe25070dda9d024c
+  Capacitor: 8ca6676b3b1147b00f7f3a547ccf68defd658d55
+  CapacitorApp: 305bd13c44f6f9d164e2ee66a4faa956ed8c0e06
+  CapacitorCordova: eb79411a3a0ed517eeb4c6dcf5933ce4bcbb5c9e
+  CapacitorHaptics: 296f771ecd89c7a1bd92a7b6826a7d268e2e70f5
+  CapacitorKeyboard: b6b0744890cdb1d9a96e2cafcc9253fdcc55de3b
+  CapacitorMlkitBarcodeScanning: 4509d61d25ef54a031df6f462c64c322a9d78f86
+  CapacitorMlkitDocumentScanner: 147ac0487818c918a4f580e33d92d74ca24dc02a
+  CapacitorMlkitFaceDetection: 5eb025afb278c790164d91291a4c493cb4141813
+  CapacitorMlkitFaceMeshDetection: bc4f06fbbde5f33907a824db19ddc3029e04038e
+  CapacitorMlkitSelfieSegmentation: 201edca3cbe0ee58b9795452c98a2c644ab748ef
+  CapacitorMlkitSubjectSegmentation: cc29137d8d293bacee35b51c85a2f6b6cbf67af6
+  CapacitorMlkitTranslation: 5591daffbd048e99b9cc64bb631f0a67b955069d
+  CapacitorStatusBar: eca7bc2b58d9f886f1ef9edb66e57a9b29c121af
+  CapawesomeCapacitorFilePicker: 63170fae6d17f3ce2547ffc0290f287e7bdc45d7
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
   GoogleMLKit: ddd51d7dff36ff28defa69afedd9cdce684fd857
   GoogleToolboxForMac: d1a2cbf009c453f4d6ded37c105e2f67a32206d8

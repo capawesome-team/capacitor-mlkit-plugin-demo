@@ -8,8 +8,7 @@ describe('FaceDetectionPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [FaceDetectionPage],
-      imports: [SharedTestingModule],
+      imports: [SharedTestingModule, FaceDetectionPage],
     }).compileComponents();
 
     fixture = TestBed.createComponent(FaceDetectionPage);

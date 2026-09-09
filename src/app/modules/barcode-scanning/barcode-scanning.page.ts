@@ -1,10 +1,35 @@
-import { Component, NgZone, OnInit, inject } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  NgZone,
+  OnInit,
+  inject,
+} from '@angular/core';
 import {
   ReactiveFormsModule,
   UntypedFormControl,
   UntypedFormGroup,
 } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import {
+  IonBackButton,
+  IonButton,
+  IonButtons,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
+  IonCol,
+  IonContent,
+  IonHeader,
+  IonInput,
+  IonItem,
+  IonLabel,
+  IonRow,
+  IonSelect,
+  IonSelectOption,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular';
 import { DialogService } from '@app/core';
 import {
   Barcode,
@@ -19,11 +44,32 @@ import { BarcodeScanningModalComponent } from './barcode-scanning-modal.componen
   selector: 'app-barcode-scanning',
   templateUrl: './barcode-scanning.page.html',
   styleUrls: ['./barcode-scanning.page.scss'],
-  imports: [IonicModule, ReactiveFormsModule],
+  imports: [
+    IonBackButton,
+    IonButton,
+    IonButtons,
+    IonCard,
+    IonCardContent,
+    IonCardHeader,
+    IonCardTitle,
+    IonCol,
+    IonContent,
+    IonHeader,
+    IonInput,
+    IonItem,
+    IonLabel,
+    IonRow,
+    IonSelect,
+    IonSelectOption,
+    IonTitle,
+    IonToolbar,
+    ReactiveFormsModule,
+  ],
 })
 export class BarcodeScanningPage implements OnInit {
   private readonly dialogService = inject(DialogService);
   private readonly ngZone = inject(NgZone);
+  private readonly changeDetectorRef = inject(ChangeDetectorRef);
 
   public readonly barcodeFormat = BarcodeFormat;
   public readonly lensFacing = LensFacing;
@@ -44,9 +90,11 @@ export class BarcodeScanningPage implements OnInit {
   public ngOnInit(): void {
     BarcodeScanner.isSupported().then((result) => {
       this.isSupported = result.supported;
+      this.changeDetectorRef.markForCheck();
     });
     BarcodeScanner.checkPermissions().then((result) => {
       this.isPermissionGranted = result.camera === 'granted';
+      this.changeDetectorRef.markForCheck();
     });
     BarcodeScanner.removeAllListeners().then(() => {
       BarcodeScanner.addListener(
@@ -83,6 +131,7 @@ export class BarcodeScanningPage implements OnInit {
       const barcode: Barcode | undefined = result.data?.barcode;
       if (barcode) {
         this.barcodes = [barcode];
+        this.changeDetectorRef.markForCheck();
       }
     });
   }
@@ -99,6 +148,7 @@ export class BarcodeScanningPage implements OnInit {
       formats,
     });
     this.barcodes = barcodes;
+    this.changeDetectorRef.markForCheck();
   }
 
   public async scan(): Promise<void> {
@@ -107,6 +157,7 @@ export class BarcodeScanningPage implements OnInit {
       formats,
     });
     this.barcodes = barcodes;
+    this.changeDetectorRef.markForCheck();
   }
 
   public async openSettings(): Promise<void> {

@@ -8,8 +8,7 @@ describe('SubjectSegmentationPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [SubjectSegmentationPage],
-      imports: [SharedTestingModule],
+      imports: [SharedTestingModule, SubjectSegmentationPage],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SubjectSegmentationPage);

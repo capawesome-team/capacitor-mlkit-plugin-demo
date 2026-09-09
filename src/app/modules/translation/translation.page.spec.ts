@@ -8,12 +8,13 @@ describe('TranslationPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [TranslationPage],
-      imports: [SharedTestingModule],
+      imports: [SharedTestingModule, TranslationPage],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TranslationPage);
     component = fixture.componentInstance;
+    // `ngOnInit` reads the downloaded models, which has no web implementation.
+    spyOn(component, 'getDownloadedModels').and.resolveTo();
     fixture.detectChanges();
   }));
 

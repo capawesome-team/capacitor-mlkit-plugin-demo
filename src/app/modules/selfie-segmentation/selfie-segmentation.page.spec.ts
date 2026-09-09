@@ -8,8 +8,7 @@ describe('SelfieSegmentationPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [SelfieSegmentationPage],
-      imports: [SharedTestingModule],
+      imports: [SharedTestingModule, SelfieSegmentationPage],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SelfieSegmentationPage);
