@@ -17,7 +17,9 @@
 The following plugins are included:
 
 - [capacitor-mlkit/barcode-scanning](https://capawesome.io/plugins/mlkit/barcode-scanning/)
+- [capacitor-mlkit/document-scanner](https://capawesome.io/plugins/mlkit/document-scanner/)
 - [capacitor-mlkit/face-detection](https://capawesome.io/plugins/mlkit/face-detection/)
+- [capacitor-mlkit/face-mesh-detection](https://capawesome.io/plugins/mlkit/face-mesh-detection/)
 - [capacitor-mlkit/selfie-segmentation](https://capawesome.io/plugins/mlkit/selfie-segmentation/)
 - [capacitor-mlkit/subject-segmentation](https://capawesome.io/plugins/mlkit/subject-segmentation/)
 - [capacitor-mlkit/translation](https://capawesome.io/plugins/mlkit/translation/)
