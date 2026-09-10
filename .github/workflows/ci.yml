@@ -97,6 +97,7 @@ jobs:
         run: xcodebuild
           -workspace App/App.xcworkspace
           -scheme App
+          -configuration Release
           -archivePath App/build/App.xarchive
           clean build archive
           CODE_SIGN_IDENTITY=""
