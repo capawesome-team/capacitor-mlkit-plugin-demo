@@ -5,8 +5,14 @@ project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/
 include ':capacitor-mlkit-barcode-scanning'
 project(':capacitor-mlkit-barcode-scanning').projectDir = new File('../node_modules/@capacitor-mlkit/barcode-scanning/android')
 
+include ':capacitor-mlkit-digital-ink-recognition'
+project(':capacitor-mlkit-digital-ink-recognition').projectDir = new File('../node_modules/@capacitor-mlkit/digital-ink-recognition/android')
+
 include ':capacitor-mlkit-document-scanner'
 project(':capacitor-mlkit-document-scanner').projectDir = new File('../node_modules/@capacitor-mlkit/document-scanner/android')
+
+include ':capacitor-mlkit-entity-extraction'
+project(':capacitor-mlkit-entity-extraction').projectDir = new File('../node_modules/@capacitor-mlkit/entity-extraction/android')
 
 include ':capacitor-mlkit-face-detection'
 project(':capacitor-mlkit-face-detection').projectDir = new File('../node_modules/@capacitor-mlkit/face-detection/android')
@@ -14,11 +20,29 @@ project(':capacitor-mlkit-face-detection').projectDir = new File('../node_module
 include ':capacitor-mlkit-face-mesh-detection'
 project(':capacitor-mlkit-face-mesh-detection').projectDir = new File('../node_modules/@capacitor-mlkit/face-mesh-detection/android')
 
+include ':capacitor-mlkit-image-labeling'
+project(':capacitor-mlkit-image-labeling').projectDir = new File('../node_modules/@capacitor-mlkit/image-labeling/android')
+
+include ':capacitor-mlkit-language-identification'
+project(':capacitor-mlkit-language-identification').projectDir = new File('../node_modules/@capacitor-mlkit/language-identification/android')
+
+include ':capacitor-mlkit-object-detection'
+project(':capacitor-mlkit-object-detection').projectDir = new File('../node_modules/@capacitor-mlkit/object-detection/android')
+
+include ':capacitor-mlkit-pose-detection'
+project(':capacitor-mlkit-pose-detection').projectDir = new File('../node_modules/@capacitor-mlkit/pose-detection/android')
+
 include ':capacitor-mlkit-selfie-segmentation'
 project(':capacitor-mlkit-selfie-segmentation').projectDir = new File('../node_modules/@capacitor-mlkit/selfie-segmentation/android')
 
+include ':capacitor-mlkit-smart-reply'
+project(':capacitor-mlkit-smart-reply').projectDir = new File('../node_modules/@capacitor-mlkit/smart-reply/android')
+
 include ':capacitor-mlkit-subject-segmentation'
 project(':capacitor-mlkit-subject-segmentation').projectDir = new File('../node_modules/@capacitor-mlkit/subject-segmentation/android')
+
+include ':capacitor-mlkit-text-recognition'
+project(':capacitor-mlkit-text-recognition').projectDir = new File('../node_modules/@capacitor-mlkit/text-recognition/android')
 
 include ':capacitor-mlkit-translation'
 project(':capacitor-mlkit-translation').projectDir = new File('../node_modules/@capacitor-mlkit/translation/android')

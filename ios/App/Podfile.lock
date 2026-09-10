@@ -8,22 +8,51 @@ PODS:
     - Capacitor
   - CapacitorKeyboard (8.0.5):
     - Capacitor
-  - CapacitorMlkitBarcodeScanning (8.1.1):
+  - CapacitorMlkitBarcodeScanning (8.2.1):
     - Capacitor
     - GoogleMLKit/BarcodeScanning (~> 8.0.0)
-  - CapacitorMlkitDocumentScanner (8.1.1):
+  - CapacitorMlkitDigitalInkRecognition (8.2.1):
     - Capacitor
-  - CapacitorMlkitFaceDetection (8.1.1):
+    - GoogleMLKit/DigitalInkRecognition (~> 8.0.0)
+  - CapacitorMlkitDocumentScanner (8.2.1):
+    - Capacitor
+  - CapacitorMlkitEntityExtraction (8.2.1):
+    - Capacitor
+    - GoogleMLKit/EntityExtraction (~> 8.0.0)
+  - CapacitorMlkitFaceDetection (8.2.1):
     - Capacitor
     - GoogleMLKit/FaceDetection (~> 8.0.0)
-  - CapacitorMlkitFaceMeshDetection (8.1.1):
+  - CapacitorMlkitFaceMeshDetection (8.2.1):
     - Capacitor
-  - CapacitorMlkitSelfieSegmentation (8.1.1):
+  - CapacitorMlkitImageLabeling (8.2.1):
+    - Capacitor
+    - GoogleMLKit/ImageLabeling (~> 8.0.0)
+  - CapacitorMlkitLanguageIdentification (8.2.1):
+    - Capacitor
+    - GoogleMLKit/LanguageID (~> 8.0.0)
+  - CapacitorMlkitObjectDetection (8.2.1):
+    - Capacitor
+    - GoogleMLKit/ObjectDetection (~> 8.0.0)
+  - CapacitorMlkitPoseDetection (8.2.1):
+    - Capacitor
+    - GoogleMLKit/PoseDetection (~> 8.0.0)
+    - GoogleMLKit/PoseDetectionAccurate (~> 8.0.0)
+  - CapacitorMlkitSelfieSegmentation (8.2.1):
     - Capacitor
     - GoogleMLKit/SegmentationSelfie (~> 8.0.0)
-  - CapacitorMlkitSubjectSegmentation (8.1.1):
+  - CapacitorMlkitSmartReply (8.2.1):
     - Capacitor
-  - CapacitorMlkitTranslation (8.1.1):
+    - GoogleMLKit/SmartReply (~> 8.0.0)
+  - CapacitorMlkitSubjectSegmentation (8.2.1):
+    - Capacitor
+  - CapacitorMlkitTextRecognition (8.2.1):
+    - Capacitor
+    - GoogleMLKit/TextRecognition (~> 8.0.0)
+    - GoogleMLKit/TextRecognitionChinese (~> 8.0.0)
+    - GoogleMLKit/TextRecognitionDevanagari (~> 8.0.0)
+    - GoogleMLKit/TextRecognitionJapanese (~> 8.0.0)
+    - GoogleMLKit/TextRecognitionKorean (~> 8.0.0)
+  - CapacitorMlkitTranslation (8.2.1):
     - Capacitor
     - GoogleMLKit/Translate (~> 8.0.0)
   - CapacitorStatusBar (8.0.3):
@@ -36,14 +65,53 @@ PODS:
   - GoogleMLKit/BarcodeScanning (8.0.0):
     - GoogleMLKit/MLKitCore
     - MLKitBarcodeScanning (~> 7.0.0)
+  - GoogleMLKit/DigitalInkRecognition (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitDigitalInkRecognition (~> 7.0.0)
+  - GoogleMLKit/EntityExtraction (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitEntityExtraction (~> 1.0.0-beta14)
   - GoogleMLKit/FaceDetection (8.0.0):
     - GoogleMLKit/MLKitCore
     - MLKitFaceDetection (~> 7.0.0)
+  - GoogleMLKit/ImageLabeling (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitImageLabeling (~> 7.0.0)
+  - GoogleMLKit/LanguageID (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitLanguageID (~> 8.0.0)
   - GoogleMLKit/MLKitCore (8.0.0):
     - MLKitCommon (~> 13.0.0)
+  - GoogleMLKit/ObjectDetection (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitObjectDetection (~> 7.0.0)
+  - GoogleMLKit/PoseDetection (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitPoseDetection (~> 1.0.0-beta15)
+  - GoogleMLKit/PoseDetectionAccurate (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitPoseDetectionAccurate (~> 1.0.0-beta15)
   - GoogleMLKit/SegmentationSelfie (8.0.0):
     - GoogleMLKit/MLKitCore
     - MLKitSegmentationSelfie (~> 1.0.0-beta13)
+  - GoogleMLKit/SmartReply (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitSmartReply (~> 7.0.0)
+  - GoogleMLKit/TextRecognition (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitTextRecognition (~> 6.0.0)
+  - GoogleMLKit/TextRecognitionChinese (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitTextRecognitionChinese (~> 5.0.0)
+  - GoogleMLKit/TextRecognitionDevanagari (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitTextRecognitionDevanagari (~> 5.0.0)
+  - GoogleMLKit/TextRecognitionJapanese (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitTextRecognitionJapanese (~> 5.0.0)
+  - GoogleMLKit/TextRecognitionKorean (8.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitTextRecognitionKorean (~> 5.0.0)
   - GoogleMLKit/Translate (8.0.0):
     - GoogleMLKit/MLKitCore
     - MLKitTranslate (~> 7.0.0)
@@ -75,20 +143,83 @@ PODS:
     - GoogleUtilities/Logger (~> 8.0)
     - GoogleUtilities/UserDefaults (~> 8.0)
     - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
+  - MLKitDigitalInkRecognition (7.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitMDD (~> 9.0)
+    - SSZipArchive (< 3.0, >= 2.5.5)
+  - MLKitEntityExtraction (1.0.0-beta14):
+    - MLKitNaturalLanguage (~> 9.0)
   - MLKitFaceDetection (7.0.0):
     - MLKitCommon (~> 13.0)
     - MLKitVision (~> 9.0)
+  - MLKitImageLabeling (7.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitImageLabelingCommon (~> 9.0)
+    - MLKitVision (~> 9.0)
+    - MLKitVisionKit (~> 10.0)
+  - MLKitImageLabelingCommon (9.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitVision (~> 9.0)
+  - MLKitLanguageID (8.0.0):
+    - MLKitNaturalLanguage (~> 9.0)
+  - MLKitMDD (9.0.0):
+    - MLKitCommon (~> 13.0)
   - MLKitNaturalLanguage (9.0.0):
     - GoogleToolboxForMac/Logger (< 5.0, >= 4.2.1)
     - "GoogleToolboxForMac/NSData+zlib (< 5.0, >= 4.2.1)"
     - GoogleToolboxForMac/StringEncoding (< 5.0, >= 4.2.1)
     - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
     - MLKitCommon (~> 13.0)
+  - MLKitObjectDetection (7.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitObjectDetectionCommon (~> 9.0)
+    - MLKitVision (~> 9.0)
+    - MLKitVisionKit (~> 10.0)
+  - MLKitObjectDetectionCommon (9.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitVision (~> 9.0)
+  - MLKitPoseDetection (1.0.0-beta15):
+    - MLKitCommon (~> 13.0)
+    - MLKitPoseDetectionCommon (= 1.0.0-beta15)
+    - MLKitXenoCommon (= 1.0.0-beta15)
+  - MLKitPoseDetectionAccurate (1.0.0-beta15):
+    - MLKitCommon (~> 13.0)
+    - MLKitPoseDetectionCommon (= 1.0.0-beta15)
+    - MLKitXenoCommon (= 1.0.0-beta15)
+  - MLKitPoseDetectionCommon (1.0.0-beta15):
+    - MLKitCommon (~> 13.0)
+    - MLKitXenoCommon (= 1.0.0-beta15)
   - MLKitSegmentationCommon (1.0.0-beta13):
     - MLKitCommon (~> 13.0)
     - MLKitXenoCommon (= 1.0.0-beta15)
   - MLKitSegmentationSelfie (1.0.0-beta13):
     - MLKitSegmentationCommon (= 1.0.0-beta13)
+  - MLKitSmartReply (7.0.0):
+    - MLKitLanguageID (~> 8.0)
+    - MLKitNaturalLanguage (~> 9.0)
+  - MLKitTextRecognition (6.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitTextRecognitionCommon (= 5.0.0)
+    - MLKitVision (~> 9.0)
+  - MLKitTextRecognitionChinese (5.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitTextRecognitionCommon (= 5.0.0)
+    - MLKitVision (~> 9.0)
+  - MLKitTextRecognitionCommon (5.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitVision (~> 9.0)
+  - MLKitTextRecognitionDevanagari (5.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitTextRecognitionCommon (= 5.0.0)
+    - MLKitVision (~> 9.0)
+  - MLKitTextRecognitionJapanese (5.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitTextRecognitionCommon (= 5.0.0)
+    - MLKitVision (~> 9.0)
+  - MLKitTextRecognitionKorean (5.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitTextRecognitionCommon (= 5.0.0)
+    - MLKitVision (~> 9.0)
   - MLKitTranslate (7.0.0):
     - MLKitNaturalLanguage (~> 9.0)
     - SSZipArchive (< 3.0, >= 2.5.5)
@@ -98,6 +229,11 @@ PODS:
     - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
     - MLImage (= 1.0.0-beta7)
     - MLKitCommon (~> 13.0)
+  - MLKitVisionKit (10.0.0):
+    - MLKitCommon (~> 13.0)
+    - MLKitImageLabelingCommon (~> 9.0)
+    - MLKitObjectDetectionCommon (~> 9.0)
+    - MLKitVision (~> 9.0)
   - MLKitXenoCommon (1.0.0-beta15):
     - MLKitCommon (~> 13.0)
     - MLKitVision (~> 9.0)
@@ -116,11 +252,19 @@ DEPENDENCIES:
   - "CapacitorHaptics (from `../../node_modules/@capacitor/haptics`)"
   - "CapacitorKeyboard (from `../../node_modules/@capacitor/keyboard`)"
   - "CapacitorMlkitBarcodeScanning (from `../../node_modules/@capacitor-mlkit/barcode-scanning`)"
+  - "CapacitorMlkitDigitalInkRecognition (from `../../node_modules/@capacitor-mlkit/digital-ink-recognition`)"
   - "CapacitorMlkitDocumentScanner (from `../../node_modules/@capacitor-mlkit/document-scanner`)"
+  - "CapacitorMlkitEntityExtraction (from `../../node_modules/@capacitor-mlkit/entity-extraction`)"
   - "CapacitorMlkitFaceDetection (from `../../node_modules/@capacitor-mlkit/face-detection`)"
   - "CapacitorMlkitFaceMeshDetection (from `../../node_modules/@capacitor-mlkit/face-mesh-detection`)"
+  - "CapacitorMlkitImageLabeling (from `../../node_modules/@capacitor-mlkit/image-labeling`)"
+  - "CapacitorMlkitLanguageIdentification (from `../../node_modules/@capacitor-mlkit/language-identification`)"
+  - "CapacitorMlkitObjectDetection (from `../../node_modules/@capacitor-mlkit/object-detection`)"
+  - "CapacitorMlkitPoseDetection (from `../../node_modules/@capacitor-mlkit/pose-detection`)"
   - "CapacitorMlkitSelfieSegmentation (from `../../node_modules/@capacitor-mlkit/selfie-segmentation`)"
+  - "CapacitorMlkitSmartReply (from `../../node_modules/@capacitor-mlkit/smart-reply`)"
   - "CapacitorMlkitSubjectSegmentation (from `../../node_modules/@capacitor-mlkit/subject-segmentation`)"
+  - "CapacitorMlkitTextRecognition (from `../../node_modules/@capacitor-mlkit/text-recognition`)"
   - "CapacitorMlkitTranslation (from `../../node_modules/@capacitor-mlkit/translation`)"
   - "CapacitorStatusBar (from `../../node_modules/@capacitor/status-bar`)"
   - "CapawesomeCapacitorFilePicker (from `../../node_modules/@capawesome/capacitor-file-picker`)"
@@ -135,12 +279,31 @@ SPEC REPOS:
     - MLImage
     - MLKitBarcodeScanning
     - MLKitCommon
+    - MLKitDigitalInkRecognition
+    - MLKitEntityExtraction
     - MLKitFaceDetection
+    - MLKitImageLabeling
+    - MLKitImageLabelingCommon
+    - MLKitLanguageID
+    - MLKitMDD
     - MLKitNaturalLanguage
+    - MLKitObjectDetection
+    - MLKitObjectDetectionCommon
+    - MLKitPoseDetection
+    - MLKitPoseDetectionAccurate
+    - MLKitPoseDetectionCommon
     - MLKitSegmentationCommon
     - MLKitSegmentationSelfie
+    - MLKitSmartReply
+    - MLKitTextRecognition
+    - MLKitTextRecognitionChinese
+    - MLKitTextRecognitionCommon
+    - MLKitTextRecognitionDevanagari
+    - MLKitTextRecognitionJapanese
+    - MLKitTextRecognitionKorean
     - MLKitTranslate
     - MLKitVision
+    - MLKitVisionKit
     - MLKitXenoCommon
     - nanopb
     - PromisesObjC
@@ -159,16 +322,32 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/keyboard"
   CapacitorMlkitBarcodeScanning:
     :path: "../../node_modules/@capacitor-mlkit/barcode-scanning"
+  CapacitorMlkitDigitalInkRecognition:
+    :path: "../../node_modules/@capacitor-mlkit/digital-ink-recognition"
   CapacitorMlkitDocumentScanner:
     :path: "../../node_modules/@capacitor-mlkit/document-scanner"
+  CapacitorMlkitEntityExtraction:
+    :path: "../../node_modules/@capacitor-mlkit/entity-extraction"
   CapacitorMlkitFaceDetection:
     :path: "../../node_modules/@capacitor-mlkit/face-detection"
   CapacitorMlkitFaceMeshDetection:
     :path: "../../node_modules/@capacitor-mlkit/face-mesh-detection"
+  CapacitorMlkitImageLabeling:
+    :path: "../../node_modules/@capacitor-mlkit/image-labeling"
+  CapacitorMlkitLanguageIdentification:
+    :path: "../../node_modules/@capacitor-mlkit/language-identification"
+  CapacitorMlkitObjectDetection:
+    :path: "../../node_modules/@capacitor-mlkit/object-detection"
+  CapacitorMlkitPoseDetection:
+    :path: "../../node_modules/@capacitor-mlkit/pose-detection"
   CapacitorMlkitSelfieSegmentation:
     :path: "../../node_modules/@capacitor-mlkit/selfie-segmentation"
+  CapacitorMlkitSmartReply:
+    :path: "../../node_modules/@capacitor-mlkit/smart-reply"
   CapacitorMlkitSubjectSegmentation:
     :path: "../../node_modules/@capacitor-mlkit/subject-segmentation"
+  CapacitorMlkitTextRecognition:
+    :path: "../../node_modules/@capacitor-mlkit/text-recognition"
   CapacitorMlkitTranslation:
     :path: "../../node_modules/@capacitor-mlkit/translation"
   CapacitorStatusBar:
@@ -182,13 +361,21 @@ SPEC CHECKSUMS:
   CapacitorCordova: eb79411a3a0ed517eeb4c6dcf5933ce4bcbb5c9e
   CapacitorHaptics: 296f771ecd89c7a1bd92a7b6826a7d268e2e70f5
   CapacitorKeyboard: b6b0744890cdb1d9a96e2cafcc9253fdcc55de3b
-  CapacitorMlkitBarcodeScanning: 4509d61d25ef54a031df6f462c64c322a9d78f86
-  CapacitorMlkitDocumentScanner: 147ac0487818c918a4f580e33d92d74ca24dc02a
-  CapacitorMlkitFaceDetection: 5eb025afb278c790164d91291a4c493cb4141813
-  CapacitorMlkitFaceMeshDetection: bc4f06fbbde5f33907a824db19ddc3029e04038e
-  CapacitorMlkitSelfieSegmentation: 201edca3cbe0ee58b9795452c98a2c644ab748ef
-  CapacitorMlkitSubjectSegmentation: cc29137d8d293bacee35b51c85a2f6b6cbf67af6
-  CapacitorMlkitTranslation: 5591daffbd048e99b9cc64bb631f0a67b955069d
+  CapacitorMlkitBarcodeScanning: 1070a9d56dd84c08a7354d12354293daeee28100
+  CapacitorMlkitDigitalInkRecognition: 60b9c73f968a436f455212768ed24765e18dfb6d
+  CapacitorMlkitDocumentScanner: cb621d27e37f449338a394263377ae71cf421acd
+  CapacitorMlkitEntityExtraction: 0b046a3a3fa0125de401fce46bb83dce72ebb387
+  CapacitorMlkitFaceDetection: d6d377a1903606f1666a403cba591d6bb2ec6ada
+  CapacitorMlkitFaceMeshDetection: 5e06afa6235ac3aa43980d97fe1671098d653b16
+  CapacitorMlkitImageLabeling: be1121c50d6916882adbb9864cfb8d97530f672e
+  CapacitorMlkitLanguageIdentification: 0c7b87031ff3613c1cf0815cb1b7d6aace46e2ab
+  CapacitorMlkitObjectDetection: 10663f71d6527d4f13e305e57e399c06c623805f
+  CapacitorMlkitPoseDetection: 51756e63044c3e3f77a7b1eb03d443a4e6c93ce4
+  CapacitorMlkitSelfieSegmentation: c3cb0cd5dc8e62fbf625af72b38e95cb8cca7aa2
+  CapacitorMlkitSmartReply: b2754b58e74f80309aabb2caf6cc2352327008ef
+  CapacitorMlkitSubjectSegmentation: 2e56208e7625a366e2aaff854595f0a840edfa2f
+  CapacitorMlkitTextRecognition: 6780cef16e36d1e8400554926bd897c68ee10b7f
+  CapacitorMlkitTranslation: 47a58c4493d54168406240a4ca72a7c893e60822
   CapacitorStatusBar: eca7bc2b58d9f886f1ef9edb66e57a9b29c121af
   CapawesomeCapacitorFilePicker: 63170fae6d17f3ce2547ffc0290f287e7bdc45d7
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
@@ -199,17 +386,36 @@ SPEC CHECKSUMS:
   MLImage: 2ab9c968e75f57911c16f4c9d9e8a8e9604a86a1
   MLKitBarcodeScanning: 72c6437f13a900833b400136be53a8a5d86f42fa
   MLKitCommon: 26b779f072a182c1603d4c88a101c350cac837b1
+  MLKitDigitalInkRecognition: 00f6bf50ed1a49c9a2e770d57fd87c7fd8aea60a
+  MLKitEntityExtraction: be55facbd780b5718fe7edcedd8d73e5385ff720
   MLKitFaceDetection: d50aff1a44aa9a4e95f7e208298a3ce40b68f9f8
+  MLKitImageLabeling: b486a127450efab9ed86e633f9a12fe7d9dbc493
+  MLKitImageLabelingCommon: 30fb7c613cd8dfd281f0456cb1c58758743cccb6
+  MLKitLanguageID: ca609e2c8706b01d1123f5d8c65f1ed7d3e385f3
+  MLKitMDD: 03fd604ba4d4f7556486716641d96977682cade4
   MLKitNaturalLanguage: 4c5580068109aaea85809981b8c4cb4675b2100f
+  MLKitObjectDetection: dd631b8a5e24d521d25cff0f52475e2711f1ed01
+  MLKitObjectDetectionCommon: 90b0e94db1c66f51196b487befa01f195106fa15
+  MLKitPoseDetection: cd580c68daf6983455109731566645c411ac7d87
+  MLKitPoseDetectionAccurate: 64397a088fe94a52e3b3d901bbfccb0a2d29aa2a
+  MLKitPoseDetectionCommon: e20a1ac0337d4470354359f9a001344e58d551d4
   MLKitSegmentationCommon: 2b745e791948849011bfd34dd19be83a4895b14b
   MLKitSegmentationSelfie: 72895c53eaf634b6efd8236a329e552bdf239383
+  MLKitSmartReply: 64aca785a238ee3098ba2a2199401fe08adf426f
+  MLKitTextRecognition: 072488cfd29f1726733378661881f88db74ba3dc
+  MLKitTextRecognitionChinese: 0e5335ca53ad9a36773fed1ef8b4abb177630fcd
+  MLKitTextRecognitionCommon: 228502b9dc61ea9cfb6199ebafef3baa842e2043
+  MLKitTextRecognitionDevanagari: 10086e73149989eb43f05b4a2f9b98c41ad403c4
+  MLKitTextRecognitionJapanese: 776fddee29ac10dc304fccea1588accc32f4640c
+  MLKitTextRecognitionKorean: dc1273aa2ef41f363b585d3dde1cf2de68c7c6d8
   MLKitTranslate: ab71c9e4a67cc79756d4dae013e47edfca3b57cb
   MLKitVision: fa8dea9012ac59497c79ddbe9ebf32051047ac4c
+  MLKitVisionKit: e8244baf4d19cf7669c65da7907662c402adcb05
   MLKitXenoCommon: d6f30a3235d21f5d7e85ec3b6015d3b21ff38ba1
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   SSZipArchive: 8a6ee5677c8e304bebc109e39cf0da91ccef22ea
 
-PODFILE CHECKSUM: 30a4d6274d2d8e1ccc726f53562530c495098d54
+PODFILE CHECKSUM: 44d7662453adb6ddc8636042eaaef2b365511f40
 
 COCOAPODS: 1.16.2

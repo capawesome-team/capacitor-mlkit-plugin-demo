@@ -36,8 +36,16 @@ export class HomePage {
       url: '/barcode-scanning',
     },
     {
+      name: 'Digital Ink Recognition',
+      url: '/digital-ink-recognition',
+    },
+    {
       name: 'Document Scanner',
       url: '/document-scanner',
+    },
+    {
+      name: 'Entity Extraction',
+      url: '/entity-extraction',
     },
     {
       name: 'Face Detection',
@@ -48,12 +56,36 @@ export class HomePage {
       url: '/face-mesh-detection',
     },
     {
+      name: 'Image Labeling',
+      url: '/image-labeling',
+    },
+    {
+      name: 'Language Identification',
+      url: '/language-identification',
+    },
+    {
+      name: 'Object Detection',
+      url: '/object-detection',
+    },
+    {
+      name: 'Pose Detection',
+      url: '/pose-detection',
+    },
+    {
       name: 'Selfie Segmentation',
       url: '/selfie-segmentation',
     },
     {
+      name: 'Smart Reply',
+      url: '/smart-reply',
+    },
+    {
       name: 'Subject Segmentation',
       url: '/subject-segmentation',
+    },
+    {
+      name: 'Text Recognition',
+      url: '/text-recognition',
     },
     {
       name: 'Translation',

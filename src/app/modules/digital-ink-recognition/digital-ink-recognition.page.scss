@@ -1,0 +1,7 @@
+canvas {
+  background-color: #ffffff;
+  border: 1px solid var(--ion-color-medium);
+  border-radius: 4px;
+  // Prevent the content from scrolling while drawing.
+  touch-action: none;
+}

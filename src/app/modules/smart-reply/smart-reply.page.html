@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ML Kit Smart Reply</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>About</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ⚡️ Capacitor plugin for ML Kit Smart Reply.
+    </ion-card-content>
+    <ion-row class="ion-no-padding">
+      <ion-col>
+        <ion-button
+          fill="clear"
+          (click)="openOnGithub()"
+          class="ion-float-right"
+          >GitHub</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Demo</ion-card-title>
+      <ion-card-subtitle
+        >Suggestions are only generated for English conversations and for the
+        messages of remote users</ion-card-subtitle
+      >
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formGroup">
+        <ion-item>
+          <ion-label position="fixed">Text</ion-label>
+          <ion-input type="text" formControlName="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="fixed">Local User</ion-label>
+          <ion-checkbox formControlName="isLocalUser" slot="end"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label position="fixed">User ID</ion-label>
+          <ion-input type="text" formControlName="userId"></ion-input>
+        </ion-item>
+        <ion-button (click)="addMessage()">Add Message</ion-button>
+        <ion-button (click)="suggestReplies()">Suggest Replies</ion-button>
+        <ion-button (click)="clearMessages()">Clear Messages</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  @if (messages.length > 0) {
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Messages</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      @for (message of messages; track message) {
+      <ion-item>
+        <ion-label>
+          <h3>{{ message.isLocalUser ? 'Local User' : message.userId }}</h3>
+          <p>{{ message.text }}</p>
+        </ion-label>
+      </ion-item>
+      }
+    </ion-card-content>
+  </ion-card>
+  } @if (status) {
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Suggestions</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="fixed">Status</ion-label>
+        <ion-input type="text" readonly [value]="status"></ion-input>
+      </ion-item>
+      @for (suggestion of suggestions; track suggestion; let i = $index) {
+      <ion-item>
+        <ion-label position="fixed">Suggestion #{{ i + 1 }}</ion-label>
+        <ion-input type="text" readonly [value]="suggestion"></ion-input>
+      </ion-item>
+      }
+    </ion-card-content>
+  </ion-card>
+  }
+</ion-content>

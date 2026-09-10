@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ML Kit Text Recognition</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>About</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ⚡️ Capacitor plugin for ML Kit Text Recognition.
+    </ion-card-content>
+    <ion-row class="ion-no-padding">
+      <ion-col>
+        <ion-button
+          fill="clear"
+          (click)="openOnGithub()"
+          class="ion-float-right"
+          >GitHub</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Demo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formGroup">
+        <ion-item>
+          <ion-label position="fixed">Script</ion-label>
+          <ion-select placeholder="Script" formControlName="script">
+            <ion-select-option [value]="script.Latin">Latin</ion-select-option>
+            <ion-select-option [value]="script.Chinese"
+              >Chinese</ion-select-option
+            >
+            <ion-select-option [value]="script.Devanagari"
+              >Devanagari</ion-select-option
+            >
+            <ion-select-option [value]="script.Japanese"
+              >Japanese</ion-select-option
+            >
+            <ion-select-option [value]="script.Korean"
+              >Korean</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+        <ion-button (click)="processImage()">Process Image</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  @if (result) {
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Text</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-textarea
+        aria-label="Text"
+        readonly
+        [autoGrow]="true"
+        [value]="result.text"
+      ></ion-textarea>
+    </ion-card-content>
+  </ion-card>
+  @for (block of result.blocks; track block; let i = $index) {
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Block #{{ i + 1 }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="fixed">Text</ion-label>
+        <ion-input type="text" readonly [value]="block.text"></ion-input>
+      </ion-item>
+      @if (block.recognizedLanguage) {
+      <ion-item>
+        <ion-label position="fixed">Language</ion-label>
+        <ion-input
+          type="text"
+          readonly
+          [value]="block.recognizedLanguage"
+        ></ion-input>
+      </ion-item>
+      } @if (block.boundingBox) {
+      <ion-item>
+        <ion-label position="fixed">Bounding Box</ion-label>
+        <ion-input
+          type="text"
+          readonly
+          [value]="formatRect(block.boundingBox)"
+        ></ion-input>
+      </ion-item>
+      }
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Lines</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          @for (line of block.lines; track line; let j = $index) {
+          <ion-item>
+            <ion-label position="fixed">Line #{{ j + 1 }}</ion-label>
+            <ion-input type="text" readonly [value]="line.text"></ion-input>
+          </ion-item>
+          }
+        </ion-card-content>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
+  } }
+</ion-content>

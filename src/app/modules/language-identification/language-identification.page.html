@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ML Kit Language Identification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>About</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ⚡️ Capacitor plugin for ML Kit Language Identification.
+    </ion-card-content>
+    <ion-row class="ion-no-padding">
+      <ion-col>
+        <ion-button
+          fill="clear"
+          (click)="openOnGithub()"
+          class="ion-float-right"
+          >GitHub</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Demo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formGroup">
+        <ion-item>
+          <ion-label position="fixed">Text</ion-label>
+          <ion-input type="text" formControlName="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="fixed">Confidence Threshold</ion-label>
+          <ion-range
+            aria-label="Confidence Threshold"
+            [ticks]="true"
+            [snaps]="true"
+            [min]="0"
+            [max]="10"
+            [pin]="true"
+            [pinFormatter]="pinFormatter"
+            formControlName="confidenceThreshold"
+          ></ion-range>
+        </ion-item>
+        <ion-button (click)="identifyLanguage()">Identify Language</ion-button>
+        <ion-button (click)="identifyPossibleLanguages()"
+          >Identify Possible Languages</ion-button
+        >
+      </form>
+    </ion-card-content>
+  </ion-card>
+  @if (language) {
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Language</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="fixed">Language</ion-label>
+        <ion-input type="text" readonly [value]="language"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  } @if (identifiedLanguages.length > 0) {
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Possible Languages</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      @for (identifiedLanguage of identifiedLanguages; track identifiedLanguage)
+      {
+      <ion-item>
+        <ion-label position="fixed"
+          >{{ identifiedLanguage.language }}</ion-label
+        >
+        <ion-input
+          type="text"
+          readonly
+          [value]="identifiedLanguage.confidence"
+        ></ion-input>
+      </ion-item>
+      }
+    </ion-card-content>
+  </ion-card>
+  }
+</ion-content>

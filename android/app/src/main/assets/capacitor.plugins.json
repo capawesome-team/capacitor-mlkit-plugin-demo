@@ -4,8 +4,16 @@
 		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.barcodescanning.BarcodeScannerPlugin"
 	},
 	{
+		"pkg": "@capacitor-mlkit/digital-ink-recognition",
+		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.digitalinkrecognition.DigitalInkRecognitionPlugin"
+	},
+	{
 		"pkg": "@capacitor-mlkit/document-scanner",
 		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.documentscanner.DocumentScannerPlugin"
+	},
+	{
+		"pkg": "@capacitor-mlkit/entity-extraction",
+		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.entityextraction.EntityExtractionPlugin"
 	},
 	{
 		"pkg": "@capacitor-mlkit/face-detection",
@@ -16,12 +24,36 @@
 		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.facemeshdetection.FaceMeshDetectionPlugin"
 	},
 	{
+		"pkg": "@capacitor-mlkit/image-labeling",
+		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.imagelabeling.ImageLabelingPlugin"
+	},
+	{
+		"pkg": "@capacitor-mlkit/language-identification",
+		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.languageidentification.LanguageIdentificationPlugin"
+	},
+	{
+		"pkg": "@capacitor-mlkit/object-detection",
+		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.objectdetection.ObjectDetectionPlugin"
+	},
+	{
+		"pkg": "@capacitor-mlkit/pose-detection",
+		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.posedetection.PoseDetectionPlugin"
+	},
+	{
 		"pkg": "@capacitor-mlkit/selfie-segmentation",
 		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.selfiesegmentation.SelfieSegmentationPlugin"
 	},
 	{
+		"pkg": "@capacitor-mlkit/smart-reply",
+		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.smartreply.SmartReplyPlugin"
+	},
+	{
 		"pkg": "@capacitor-mlkit/subject-segmentation",
 		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.subjectsegmentation.SubjectSegmentationPlugin"
+	},
+	{
+		"pkg": "@capacitor-mlkit/text-recognition",
+		"classpath": "io.capawesome.capacitorjs.plugins.mlkit.textrecognition.TextRecognitionPlugin"
 	},
 	{
 		"pkg": "@capacitor-mlkit/translation",

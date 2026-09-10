@@ -17,11 +17,19 @@
 The following plugins are included:
 
 - [capacitor-mlkit/barcode-scanning](https://capawesome.io/docs/sdks/capacitor/mlkit/barcode-scanning/)
+- [capacitor-mlkit/digital-ink-recognition](https://capawesome.io/docs/sdks/capacitor/mlkit/digital-ink-recognition/)
 - [capacitor-mlkit/document-scanner](https://capawesome.io/docs/sdks/capacitor/mlkit/document-scanner/)
+- [capacitor-mlkit/entity-extraction](https://capawesome.io/docs/sdks/capacitor/mlkit/entity-extraction/)
 - [capacitor-mlkit/face-detection](https://capawesome.io/docs/sdks/capacitor/mlkit/face-detection/)
 - [capacitor-mlkit/face-mesh-detection](https://capawesome.io/docs/sdks/capacitor/mlkit/face-mesh-detection/)
+- [capacitor-mlkit/image-labeling](https://capawesome.io/docs/sdks/capacitor/mlkit/image-labeling/)
+- [capacitor-mlkit/language-identification](https://capawesome.io/docs/sdks/capacitor/mlkit/language-identification/)
+- [capacitor-mlkit/object-detection](https://capawesome.io/docs/sdks/capacitor/mlkit/object-detection/)
+- [capacitor-mlkit/pose-detection](https://capawesome.io/docs/sdks/capacitor/mlkit/pose-detection/)
 - [capacitor-mlkit/selfie-segmentation](https://capawesome.io/docs/sdks/capacitor/mlkit/selfie-segmentation/)
+- [capacitor-mlkit/smart-reply](https://capawesome.io/docs/sdks/capacitor/mlkit/smart-reply/)
 - [capacitor-mlkit/subject-segmentation](https://capawesome.io/docs/sdks/capacitor/mlkit/subject-segmentation/)
+- [capacitor-mlkit/text-recognition](https://capawesome.io/docs/sdks/capacitor/mlkit/text-recognition/)
 - [capacitor-mlkit/translation](https://capawesome.io/docs/sdks/capacitor/mlkit/translation/)
 
 ## Development Setup 💻

@@ -1,0 +1,136 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ML Kit Entity Extraction</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>About</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ⚡️ Capacitor plugin for ML Kit Entity Extraction.
+    </ion-card-content>
+    <ion-row class="ion-no-padding">
+      <ion-col>
+        <ion-button
+          fill="clear"
+          (click)="openOnGithub()"
+          class="ion-float-right"
+          >GitHub</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Extract Entities</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="extractFormGroup">
+        <ion-item>
+          <ion-label position="fixed">Text</ion-label>
+          <ion-input type="text" formControlName="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="fixed">Language</ion-label>
+          <ion-select formControlName="language">
+            @for (item of language | keyvalue; track item) {
+            <ion-select-option [value]="item.value"
+              >{{ item.key }}</ion-select-option
+            >
+            }
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="fixed">Reference Time</ion-label>
+          <ion-input type="number" formControlName="referenceTime"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="fixed">Reference Time Zone</ion-label>
+          <ion-input
+            type="text"
+            formControlName="referenceTimeZone"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="fixed">Entity Types</ion-label>
+          <ion-select formControlName="entityTypes" [multiple]="true">
+            @for (item of entityType | keyvalue; track item) {
+            <ion-select-option [value]="item.value"
+              >{{ item.key }}</ion-select-option
+            >
+            }
+          </ion-select>
+        </ion-item>
+      </form>
+      <ion-button (click)="extractEntities()">Extract Entities</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Manage Models</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="manageModelsFormGroup">
+        <ion-item>
+          <ion-label position="fixed">Language</ion-label>
+          <ion-select formControlName="languages" [multiple]="true">
+            @for (item of language | keyvalue; track item) {
+            <ion-select-option [value]="item.value"
+              >{{ item.key }}</ion-select-option
+            >
+            }
+          </ion-select>
+        </ion-item>
+      </form>
+      <ion-button (click)="saveModels()" [disabled]="disableSaveModelsButton"
+        >Save</ion-button
+      >
+    </ion-card-content>
+  </ion-card>
+  @for (annotation of annotations; track annotation; let i = $index) {
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Annotation #{{ i + 1 }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="fixed">Text</ion-label>
+        <ion-input type="text" readonly [value]="annotation.text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed">Start</ion-label>
+        <ion-input type="text" readonly [value]="annotation.start"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed">End</ion-label>
+        <ion-input type="text" readonly [value]="annotation.end"></ion-input>
+      </ion-item>
+      @for (entity of annotation.entities; track entity; let j = $index) {
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Entity #{{ j + 1 }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          @for (property of getEntityProperties(entity); track property.key) {
+          <ion-item>
+            <ion-label position="fixed">{{ property.key }}</ion-label>
+            <ion-input
+              type="text"
+              readonly
+              [value]="property.value"
+            ></ion-input>
+          </ion-item>
+          }
+        </ion-card-content>
+      </ion-card>
+      }
+    </ion-card-content>
+  </ion-card>
+  }
+</ion-content>

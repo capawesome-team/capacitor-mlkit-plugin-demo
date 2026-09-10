@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ML Kit Object Detection</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>About</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ⚡️ Capacitor plugin for ML Kit Object Detection.
+    </ion-card-content>
+    <ion-row class="ion-no-padding">
+      <ion-col>
+        <ion-button
+          fill="clear"
+          (click)="openOnGithub()"
+          class="ion-float-right"
+          >GitHub</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Demo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formGroup">
+        <ion-item>
+          <ion-label position="fixed">Classification</ion-label>
+          <ion-checkbox
+            formControlName="shouldEnableClassification"
+            slot="end"
+          ></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label position="fixed">Multiple Objects</ion-label>
+          <ion-checkbox
+            formControlName="shouldEnableMultipleObjects"
+            slot="end"
+          ></ion-checkbox>
+        </ion-item>
+        <ion-button (click)="processImage()">Process Image</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  @for (object of detectedObjects; track object; let i = $index) {
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Object #{{ i + 1 }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="fixed">Bounding Box</ion-label>
+        <ion-input
+          type="text"
+          readonly
+          [value]="formatRect(object.boundingBox)"
+        ></ion-input>
+      </ion-item>
+      @if (object.trackingId !== undefined) {
+      <ion-item>
+        <ion-label position="fixed">Tracking ID</ion-label>
+        <ion-input type="text" readonly [value]="object.trackingId"></ion-input>
+      </ion-item>
+      } @if (object.labels.length > 0) {
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Labels</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          @for (label of object.labels; track label) {
+          <ion-item>
+            <ion-label position="fixed">{{ label.text }}</ion-label>
+            <ion-input
+              type="text"
+              readonly
+              [value]="label.confidence"
+            ></ion-input>
+          </ion-item>
+          }
+        </ion-card-content>
+      </ion-card>
+      }
+    </ion-card-content>
+  </ion-card>
+  }
+</ion-content>

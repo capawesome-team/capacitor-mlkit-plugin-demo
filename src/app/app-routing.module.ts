@@ -20,10 +20,24 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'digital-ink-recognition',
+    loadChildren: () =>
+      import('./modules/digital-ink-recognition/digital-ink-recognition.module').then(
+        (m) => m.DigitalInkRecognitionModule,
+      ),
+  },
+  {
     path: 'document-scanner',
     loadChildren: () =>
       import('./modules/document-scanner/document-scanner.module').then(
         (m) => m.DocumentScannerModule,
+      ),
+  },
+  {
+    path: 'entity-extraction',
+    loadChildren: () =>
+      import('./modules/entity-extraction/entity-extraction.module').then(
+        (m) => m.EntityExtractionModule,
       ),
   },
   {
@@ -41,6 +55,34 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'image-labeling',
+    loadChildren: () =>
+      import('./modules/image-labeling/image-labeling.module').then(
+        (m) => m.ImageLabelingModule,
+      ),
+  },
+  {
+    path: 'language-identification',
+    loadChildren: () =>
+      import('./modules/language-identification/language-identification.module').then(
+        (m) => m.LanguageIdentificationModule,
+      ),
+  },
+  {
+    path: 'object-detection',
+    loadChildren: () =>
+      import('./modules/object-detection/object-detection.module').then(
+        (m) => m.ObjectDetectionModule,
+      ),
+  },
+  {
+    path: 'pose-detection',
+    loadChildren: () =>
+      import('./modules/pose-detection/pose-detection.module').then(
+        (m) => m.PoseDetectionModule,
+      ),
+  },
+  {
     path: 'selfie-segmentation',
     loadChildren: () =>
       import('./modules/selfie-segmentation/selfie-segmentation.module').then(
@@ -48,10 +90,24 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'smart-reply',
+    loadChildren: () =>
+      import('./modules/smart-reply/smart-reply.module').then(
+        (m) => m.SmartReplyModule,
+      ),
+  },
+  {
     path: 'subject-segmentation',
     loadChildren: () =>
       import('./modules/subject-segmentation/subject-segmentation.module').then(
         (m) => m.SubjectSegmentationModule,
+      ),
+  },
+  {
+    path: 'text-recognition',
+    loadChildren: () =>
+      import('./modules/text-recognition/text-recognition.module').then(
+        (m) => m.TextRecognitionModule,
       ),
   },
   {
