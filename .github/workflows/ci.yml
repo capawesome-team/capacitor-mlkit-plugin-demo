@@ -64,7 +64,7 @@ jobs:
         run: npx ionic capacitor update android
       - name: Build with Gradle
         working-directory: android
-        run: ./gradlew build
+        run: ./gradlew assembleDebug
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
