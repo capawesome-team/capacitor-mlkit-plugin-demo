@@ -72,7 +72,7 @@ jobs:
           path: android/app/build/outputs/apk/debug
   ios:
     name: Build iOS platform
-    runs-on: macos-14
+    runs-on: macos-26
     needs: [build]
     steps:
       - name: Checkout
@@ -97,6 +97,7 @@ jobs:
         run: xcodebuild
           -workspace App/App.xcworkspace
           -scheme App
+          -destination 'generic/platform=iOS'
           -configuration Release
           -archivePath App/build/App.xarchive
           clean build archive
