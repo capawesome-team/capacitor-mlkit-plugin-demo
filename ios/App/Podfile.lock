@@ -1,9 +1,9 @@
 PODS:
-  - Capacitor (8.5.2):
+  - Capacitor (8.5.3):
     - CapacitorCordova
   - CapacitorApp (8.1.2):
     - Capacitor
-  - CapacitorCordova (8.5.2)
+  - CapacitorCordova (8.5.3)
   - CapacitorHaptics (8.0.2):
     - Capacitor
   - CapacitorKeyboard (8.0.6):
@@ -356,9 +356,9 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capawesome/capacitor-file-picker"
 
 SPEC CHECKSUMS:
-  Capacitor: 89067779e14fb7ea56af07b4817f45d1f0c2a269
+  Capacitor: 2f67eaeb8ed79909cd35b5e7439a5c2a9ca58e0f
   CapacitorApp: 7b7e43debe505bc61beedb83796aa1368c86078b
-  CapacitorCordova: 5bec5648cbd09a176ce34ce5e7b6cdabb2c8a327
+  CapacitorCordova: 0b7326439c7a09fc5d20eced5e0dab986327a493
   CapacitorHaptics: 296f771ecd89c7a1bd92a7b6826a7d268e2e70f5
   CapacitorKeyboard: f9e85e685082e9f63404de15db4a4291448b0912
   CapacitorMlkitBarcodeScanning: 1070a9d56dd84c08a7354d12354293daeee28100
